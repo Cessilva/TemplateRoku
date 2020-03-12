@@ -2,14 +2,6 @@
 <component name="mainScene" extends="Scene"> 
 
 <!-- BrightScript Portion -->
-<script type="text/brightscript" >
-<![CDATA[
-  '** 
-  function init()
-
-    m.top.setFocus(true)
-  end function
-]]>
-</script>
+<script type="text/brightscript" uri="pkg:/components/mainScene.brs"></script>
 <!-- End of BrightScript Portion -->
 </component>
