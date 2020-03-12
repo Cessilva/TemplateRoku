@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="mainScene" extends="Scene"> 
+
+<!-- BrightScript Portion -->
+<script type="text/brightscript" >
+<![CDATA[
+  '** 
+  function init()
+
+    m.top.setFocus(true)
+  end function
+]]>
+</script>
+<!-- End of BrightScript Portion -->
+</component>
