@@ -1,29 +1,18 @@
 sub init()
    m.Sitios = m.top.findNode("Sitios")
     m.content = createObject("RoSGNode","ContentNode")
-      addSection("Renderable Nodes")
+      
+      addSection("TODOS")
       addItem("Rectangle")
       addItem("Rotated Rectangle")
       addItem("Label")
       addItem("Poster")
-      addItem("Video")
-      addItem("Video Zoom")
 
-      addSection("Animation Nodes")
-      addItem("Animation Vector 2D Interpolator")
-      addItem("Animation Color Interpolator")
-      addItem("Animation Float Interpolator")
-      addItem("Sequential Animation")
+      addSection("Lists and Grids")
       addItem("Parallel Animation")
       addItem("Fade-In Animation")
       addItem("Fade-Out Animation")
-
-      addSection("Control Nodes")
       addItem("Timer")
-
-      addSection("Lists and Grids")
-      addItem("Poster Grid")
-      addItem("Markup Grid")
 
       m.Sitios.content = m.content
 

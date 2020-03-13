@@ -16,19 +16,10 @@ function onKeyEvent(key as string, press as boolean) as boolean
       print key
       m.myRectangulo.visible = true
       m.myJson.visible = false
-    else if key = "down"
+    else if key = "OK"
       print key
       m.myRectangulo.visible = false
       m.myJson.visible = true
-    else if key = "OK" 
-      print key
-      if (m.myJson.visible=false)
-        if(m.myRectangulo.visible = true ) then
-          m.myRectangulo.visible = false
-        else
-          m.myRectangulo.visible = true
-        end if
-      end if
       return true
     end if
   end if
