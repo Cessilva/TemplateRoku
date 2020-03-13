@@ -22,10 +22,12 @@ function onKeyEvent(key as string, press as boolean) as boolean
       m.myJson.visible = true
     else if key = "OK" 
       print key
-      if(m.myRectangulo.visible = true) then
-        m.myRectangulo.visible = false
-      else
-        m.myRectangulo.visible = true
+      if (m.myJson.visible=false)
+        if(m.myRectangulo.visible = true ) then
+          m.myRectangulo.visible = false
+        else
+          m.myRectangulo.visible = true
+        end if
       end if
       return true
     end if

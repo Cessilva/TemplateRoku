@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="Json" extends="Group" >
 <script type="text/brightscript" uri="pkg:/components/Json/Json.brs" />
+<interface>
+	<field id="content" type="node" />
+</interface>
 <children>
-<Label
-  id="myJson"
-  height="44"
-  width="0"
-  text = "Soy el componente json"
-  horizAlign = "left"
-  vertAlign = "center"
-  translation="[318,8]" />
+<LabelList
+      id = "Sitios"
+      translation = "[ 20, 92 ]"
+      itemSize = "[ 440, 48 ]"
+      itemSpacing = "[ 0, 0 ]"
+ />
 </children>
 </component>
