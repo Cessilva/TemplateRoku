@@ -1,31 +1,41 @@
-sub init()
-   m.Sitios = m.top.findNode("Sitios")
-    m.content = createObject("RoSGNode","ContentNode")
-      
-      addSection("TODOS")
-      addItem("Rectangle")
-      addItem("Rotated Rectangle")
-      addItem("Label")
-      addItem("Poster")
+function init()
+    cineDeOro=getcontent("http://mfwkstbroku-api.clarovideo.net/services/content/list?order_id=200&authpn=roku&order_way=DESC&device_category=stb&from=0&device_manufacturer=roku&user_id=35575963&authpt=IdbIIWeFzYdy&region=mexico&device_model=generic&quantity=40&device_type=generic&level_id=GPS&node_id=43940&format=json&api_version=v5.86")
+    print "------------------lista completa-------------------------------"
+    print cineDeOro
+    content = parseXMLContent(cineDeOro)
+    print content
+    m.top.content = content
 
-      addSection("Lists and Grids")
-      addItem("Parallel Animation")
-      addItem("Fade-In Animation")
-      addItem("Fade-Out Animation")
-      addItem("Timer")
+end function
 
-      m.Sitios.content = m.content
+function parseXMLContent(list As Object)
 
-      m.top.setFocus(true)
-end sub
+    rowItems = createObject("RoSGNode","ContentNode")
+    for each itemAA in list
+            rowItems.createChild("ContentNode")
+            rowItems.title=itemAA.title
+            rowItems.description=itemAA.description
+            rowItems.HDPosterUrl=itemAA.HDPosterUrl
+    end for
+    print array
+    return rowItems
+end function
 
-sub addSection(sectiontext as string)
-      m.sectionContent = m.content.createChild("ContentNode")
-      m.sectionContent.CONTENTTYPE = "SECTION"
-      m.sectionContent.TITLE = sectiontext
-    end sub
-
-sub addItem(itemtext as string)
-    item = m.sectionContent.createChild("ContentNode")
-    item.title = itemtext
-end sub
+    function getcontent(contenturi as String)
+        url = createObject("roUrlTransfer")
+        url.setUrl(contenturi)
+        rsp = url.getToString()
+        responseJson = parseJson(rsp).response
+        ? "responseJson "; responseJson
+        responseArray = responseJson.groups
+        result = []
+        for each rowItem in responseArray
+            xmlItem = {
+                Title: rowItem.title
+                description: rowItem.description_large
+                HDPosterUrl: rowItem.image_medium
+            }
+            result.Push(xmlitem)
+        end for
+        return result
+end function

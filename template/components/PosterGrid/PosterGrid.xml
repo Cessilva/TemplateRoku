@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="PosterGrid" extends="Group" >
+<script type="text/brightscript" uri="pkg:/components/PosterGrid/PosterGrid.brs" />
+<children>
+ <Poster
+  id="myPoster"
+  loadSync="true"
+  translation="[200,50]" />
+</children>
+</component>

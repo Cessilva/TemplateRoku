@@ -6,10 +6,6 @@ sub init()
   m.myRectangulo.SetFocus(true)
 end sub
 
-sub loadContent()
-  m.top.gridContent = m.contentHandler.content
-end sub
-
 function onKeyEvent(key as string, press as boolean) as boolean
   if press then
     if key = "up"
