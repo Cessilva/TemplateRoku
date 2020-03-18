@@ -9,15 +9,15 @@ function init()
 end function
 
 function parseXMLContent(list As Object)
-
     rowItems = createObject("RoSGNode","ContentNode")
+
     for each itemAA in list
             rowItems.createChild("ContentNode")
             rowItems.title=itemAA.title
             rowItems.description=itemAA.description
             rowItems.HDPosterUrl=itemAA.HDPosterUrl
     end for
-    print array
+    
     return rowItems
 end function
 
