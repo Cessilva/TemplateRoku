@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<component name="mainScene" extends="Scene"> 
+<component name="mainScene" extends="Scene" > 
 <!-- BrightScript Portion -->
 <script type="text/brightscript" uri="pkg:/components/mainScene.brs"></script>
 <children>
