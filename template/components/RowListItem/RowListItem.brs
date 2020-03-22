@@ -19,10 +19,4 @@ end sub
     print "showrowfocus"
       m.itemmask.opacity = 0.75 - (m.top.rowFocusPercent * 0.75)
     end sub
-    
-    sub OnFocusedChildChange()
-    ? "[GridScreen] >> OnFocusedChildChange"
-    if m.top.isInFocusChain() and not m.rowList.hasFocus() then
-        m.rowList.setFocus(true)
-    end if
-    end sub
+  
