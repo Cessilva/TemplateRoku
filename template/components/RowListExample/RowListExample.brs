@@ -1,9 +1,9 @@
  sub init()
       m.rowlist = m.top.findNode("myRowList")
-      m.readPosterGridTask = createObject("roSGNode","PosterGridTask")
-      m.readPosterGridTask.control = "RUN"
-      m.readPosterGridTask.observeField("content", "showpostergrid")
-      m.rowlist.content= m.readPosterGridTask.content
+      m.readRowListExampleTask = createObject("roSGNode","RowListExampleTask")
+      m.readRowListExampleTask.control = "RUN"
+      m.readRowListExampleTask.observeField("content", "showpostergrid")
+      m.rowlist.content= m.readRowListExampleTask.content
       m.top.setFocus(true)
 
       m.top.observeField("focusedChild","OnFocusedChildChange")

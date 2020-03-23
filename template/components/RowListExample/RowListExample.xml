@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<component name="PosterGrid" extends="Group" >
+<component name="RowListExample" extends="Group" >
 <interface>
 		<field id="content" type="node" alias="myRowList.content" onChange="onContentChange"/>
 		<field id="rowItemSelected" type="intarray" alwaysnotify="true" alias="myRowList.rowItemSelected"/>
 		<field id="itemFocused" type="intarray" alias="myRowList.rowItemFocused" onChange="OnItemFocused"/>
 		<field id="focusedContent" type="node"/>
 </interface>
-<script type="text/brightscript" uri="pkg:/components/PosterGrid/PosterGrid.brs" />
+<script type="text/brightscript" uri="pkg:/components/RowListExample/RowListExample.brs" />
 <children>
  <RowList 
       id = "myRowList" 

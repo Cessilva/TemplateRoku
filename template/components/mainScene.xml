@@ -4,6 +4,6 @@
 <script type="text/brightscript" uri="pkg:/components/mainScene.brs"></script>
 <children>
         <Rectangulo id="myRectangulo" />
-        <PosterGrid id="myJson"/>
+        <RowListExample id="myJson"/>
 </children>
 </component>
