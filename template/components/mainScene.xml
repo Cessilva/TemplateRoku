@@ -3,7 +3,7 @@
 <!-- BrightScript Portion -->
 <script type="text/brightscript" uri="pkg:/components/mainScene.brs"></script>
 <children>
-        <Rectangulo id="myRectangulo" />
-        <RowListExample id="myJson"/>
+        <RowListExample id="myRowListExample"/>
+        <RowListPageContent id="myRowListPageContent"/>
 </children>
 </component>

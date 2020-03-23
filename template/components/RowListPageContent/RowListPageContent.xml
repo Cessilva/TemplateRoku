@@ -1,0 +1,12 @@
+<?xml version = "1.0" encoding = "utf-8" ?>
+<component name = "RowListPageContent" extends = "Group" >
+
+  <script type = "text/brightscript" uri="pkg:/components/RowListPageContent/RowListPageContent.brs/"></script>
+  
+  <children >
+    <ContentPageContent id="myContentPageContent"/>
+    <!-- <ButtonsPageContent id="myButtonPageContent"/>
+    <RowListSimple id="myRowListSimple"/> -->
+  </children>
+  
+</component>

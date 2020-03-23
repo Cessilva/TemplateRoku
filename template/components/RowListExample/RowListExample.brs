@@ -35,8 +35,7 @@ end sub
 'm.top.content.getChild(itemFocused[0]).getChild(itemFocused[1])
 sub OnItemFocused()
     itemFocused = m.top.itemFocused
-    print "------------------------------------"
-    print m.top.content.getChild(itemFocused[0]).getChild(itemFocused[1])
+    'print m.top.content.getChild(itemFocused[0]).getChild(itemFocused[1])
     if itemFocused.count() = 2 then
         focusedContent = m.top.content.getChild(itemFocused[0]).getChild(itemFocused[1])
         if focusedContent <> invalid then

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="ContentPageContent" extends="Group" > 
+<!-- BrightScript Portion -->
+<script type="text/brightscript" uri="pkg:/components/ContentPageContent/ContentPageContent.brs"></script>
+<children>
+    <Poster
+    id="testPoster"
+    uri="pkg:/images/channel-poster_fhd.png"
+    width="0.0"
+    height="0.0"
+    translation="[160,8]" 
+    />
+    <Label
+    id="testLabel"
+    height="44"
+    width="0"
+    font="font:MediumBoldSystemFont"
+    text = "Application Development Made Easy!"
+    horizAlign = "left"
+    vertAlign = "center"
+    translation="[318,8]" />
+</children>
+</component>
