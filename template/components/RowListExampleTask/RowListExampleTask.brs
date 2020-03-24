@@ -52,9 +52,14 @@ function getcontent(contenturi as String)
     result = []
     for each rowItem in responseArray
         xmlItem = {
+            'Informacion para RowListExample
+            HDPosterUrl: rowItem.image_small
+            'Informacion para Content PageContent
             Title: rowItem.title
             description: rowItem.description_large
-            HDPosterUrl: rowItem.image_small
+            SDPosterUrl: rowItem.image_clean_horizontal
+            PlayDuration: rowItem.duration
+            ReleaseDate	:rowItem.date
         }
         result.Push(xmlitem)
     end for

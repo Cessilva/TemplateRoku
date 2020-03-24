@@ -1,23 +1,38 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <component name="ContentPageContent" extends="Group" > 
 <!-- BrightScript Portion -->
+<interface>
+		<field id="content" type="node" OnChange="asignarDatos"/>
+</interface>
 <script type="text/brightscript" uri="pkg:/components/ContentPageContent/ContentPageContent.brs"></script>
 <children>
     <Poster
-    id="testPoster"
-    uri="pkg:/images/channel-poster_fhd.png"
-    width="0.0"
-    height="0.0"
-    translation="[160,8]" 
+    id="myPosterCPC"
+    height="500"
+    translation="[0.0]" 
     />
     <Label
-    id="testLabel"
-    height="44"
+    id="myTitle"
+    height="120"
     width="0"
-    font="font:MediumBoldSystemFont"
-    text = "Application Development Made Easy!"
+    font="font:LargeBoldSystemFont"
     horizAlign = "left"
-    vertAlign = "center"
-    translation="[318,8]" />
+    translation="[120,90]" />
+    <Label
+    id="myInformation"
+    height="20"
+    width="0"
+
+    font="font:SmallBoldSystemFont"
+    horizAlign = "left"
+    translation="[120,135]" />
+    <Label
+    id="myDescription"
+    height="200"
+    width="700"
+    wrap="true"
+    font="font:MediumBoldSystemFont"
+    horizAlign = "left"
+    translation="[120,190]" />
 </children>
 </component>

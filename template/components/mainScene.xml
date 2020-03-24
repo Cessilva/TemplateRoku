@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <component name="mainScene" extends="Scene" > 
 <!-- BrightScript Portion -->
+<!-- <interface>
+        <field id="ContentPage" type="node" alias="myRowListPageContent.focusedPageContent" />
+</interface> -->
 <script type="text/brightscript" uri="pkg:/components/mainScene.brs"></script>
 <children>
         <RowListExample id="myRowListExample"/>

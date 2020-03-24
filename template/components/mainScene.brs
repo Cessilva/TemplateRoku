@@ -1,12 +1,17 @@
 sub init()
   m.myRowListExample = m.top.findNode("myRowListExample")
   m.myRowListPageContent = m.top.findNode("myRowListPageContent")
-  
+  m.myRowListExample.observeField("itemFocused","asignarContenidoActual")
+
   m.myRowListExample.visible = true
   m.myRowListPageContent.visible=false
 
-   m.myRowListExample.SetFocus(true)
+  m.myRowListExample.SetFocus(true)
 end sub
+
+function asignarContenidoActual()
+  m.myRowListPageContent.focusedPageContent=m.myRowListExample.focusedContent
+end function
 
 ' QUITAMOS UN MOMENTO EL ONKEYEVENT
 function onKeyEvent(key as String, press as Boolean) as Boolean
