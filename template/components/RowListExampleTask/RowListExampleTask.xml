@@ -4,5 +4,6 @@
 <script type="text/brightscript" uri="pkg:/components/RowListExampleTask/RowListExampleTask.brs" />
   <interface>
     <field id = "content" type = "node" />
+    <field id = "contentSimple" type = "node" />
   </interface>
 </component>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="RowListSimple" extends="Group" > 
+<!-- BrightScript Portion -->
+<interface>
+		<field id="content" type="node" alias="myRowListSimple.content" onChange="onContentChange"/>
+		<field id="rowItemSelected" type="intarray" alwaysnotify="true" alias="myRowListSimple.rowItemSelected"/>
+		<field id="itemFocused" type="intarray" alias="myRowListSimple.rowItemFocused" onChange="OnItemFocused"/>
+		<field id="focusedContent" type="node"/>
+</interface>
+<script type="text/brightscript" uri="pkg:/components/RowListSimple/RowListSimple.brs"></script>
+<children>
+<Label
+    id="myText"
+    height="120"
+    width="0"
+    text="Otras personas que vieron este contenido, tambien vieron:"
+    font="font:MediumBoldSystemFont"
+    horizAlign = "left"
+    translation="[70,480]" />
+<RowList 
+      id = "myRowListSimple" 
+      translation = "[70, 520 ]" 
+      numRows = "1" 
+      itemComponentName = "RowListItemSimple"
+      itemSize = "[ 1400, 160 ]" 
+      rowItemSize = "[ [300, 160] ]" 
+      showRowLabel  = "[ false ]"
+      drawFocusFeedback = "true" 
+      rowFocusAnimationStyle = "fixedFocusWrap" />
+</children>
+</component>

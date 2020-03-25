@@ -1,5 +1,5 @@
 <?xml version = "1.0" encoding = "utf-8" ?>
-<component name = "RowListPageContent" extends = "Group" >
+<component name = "RowListPageContent" extends = "Group"  >
 <interface>
 		<field id="focusedPageContent" type="node" OnChange="pasarContenidoContentPageContent"  />
 </interface>
@@ -7,8 +7,8 @@
   
   <children >
     <ContentPageContent id="myContentPageContent"/>
-    <!-- <ButtonsPageContent id="myButtonPageContent"/>
-    <RowListSimple id="myRowListSimple"/> -->
+    <!-- <ButtonsPageContent id="myButtonPageContent"/>-->
+    <RowListSimple id="myRowListSimple"/> 
   </children>
   
 </component>
