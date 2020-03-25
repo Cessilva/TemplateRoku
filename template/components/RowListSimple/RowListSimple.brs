@@ -4,8 +4,8 @@
       m.readRowListExampleTask.control = "RUN"
       m.readRowListExampleTask.observeField("contentSimple", "showpostergrid")
       m.rowlistSimple.content= m.readRowListExampleTask.contentSimple
-      m.top.setFocus(true)
-       m.top.observeField("focusedChild","OnFocusedChildChange")
+      m.top.setFocus(false)
+      m.top.observeField("focusedChild","OnFocusedChildChange")
     end sub
     
 
@@ -17,12 +17,12 @@ sub OnFocusedChildChange()
 end sub
 
 sub OnItemFocused()
-    itemFocused = m.top.itemFocused
+    itemFocused = m.top.itemSimpleFocused
     'print m.top.content.getChild(itemFocused[0]).getChild(itemFocused[1])
     if itemFocused.count() = 2 then
         focusedContent = m.top.content.getChild(itemFocused[0]).getChild(itemFocused[1])
         if focusedContent <> invalid then
-            m.top.focusedContent = focusedContent
+            m.top.focusedSimpleRowlistContent = focusedContent
         end if
     end if
 end sub

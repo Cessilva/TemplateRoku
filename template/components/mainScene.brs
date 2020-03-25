@@ -1,12 +1,13 @@
 sub init()
   m.myRowListExample = m.top.findNode("myRowListExample")
   m.myRowListPageContent = m.top.findNode("myRowListPageContent")
+  
   m.myRowListExample.observeField("itemFocused","asignarContenidoActual")
-
   m.myRowListExample.visible = true
-  m.myRowListPageContent.visible=false
+  m.myRowListPageContent.visible=false  
+  m.myRowListExample.setFocus(true)
 
-   m.myRowListExample.setFocus(true)
+
 end sub
 
 function asignarContenidoActual()
@@ -20,17 +21,15 @@ function onKeyEvent(key as String, press as Boolean) as Boolean
   if (press=false) then
     if (key = "OK") then
       print key
-      ' if not m.myRowListPageContent.hasFocus() then
-      '     m.myRowListPageContent.setFocus(true)
-      ' end if
+      m.myRowListPageContent.setFocus(true)
+      m.myRowListExample.setFocus(false)
       m.myRowListPageContent.visible=true
       m.myRowListExample.visible = false
     else 
       if (key="options") then 
       print key
-      '  if not m.myRowListExample.hasFocus() then
-      '      m.myRowListExample.setFocus(true)
-      ' end if
+      m.myRowListPageContent.setFocus(false)
+      m.myRowListExample.setFocus(true)
       m.myRowListPageContent.visible=false
       m.myRowListExample.visible = true
       end if  

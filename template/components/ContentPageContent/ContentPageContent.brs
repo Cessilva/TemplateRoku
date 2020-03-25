@@ -5,7 +5,6 @@ sub init()
       m.myDescription = m.top.findNode("myDescription")
 end sub
 function asignarDatos()
-      print m.top.content
       datos="Categorias          "+ str(m.top.content.PLAYDURATION)+"min           "+m.top.content.releasedate
       m.myPosterCPC.uri= m.top.content.SDPosterUrl
       m.myTitle.text=m.top.content.title

@@ -1,5 +1,5 @@
 <?xml version = "1.0" encoding = "utf-8" ?>
-<component name = "RowListPageContent" extends = "Group"  >
+<component name = "RowListPageContent" extends = "Group" initialFocus="myRowListSimple" >
 <interface>
 		<field id="focusedPageContent" type="node" OnChange="pasarContenidoContentPageContent"  />
 </interface>

@@ -3,9 +3,9 @@
 <!-- BrightScript Portion -->
 <interface>
 		<field id="content" type="node" alias="myRowListSimple.content" onChange="onContentChange"/>
-		<field id="rowItemSelected" type="intarray" alwaysnotify="true" alias="myRowListSimple.rowItemSelected"/>
-		<field id="itemFocused" type="intarray" alias="myRowListSimple.rowItemFocused" onChange="OnItemFocused"/>
-		<field id="focusedContent" type="node"/>
+		<field id="rowItemSimpleSelected" type="intarray" alwaysnotify="true" alias="myRowListSimple.rowItemSelected"/>
+		<field id="itemSimpleFocused" type="intarray" alias="myRowListSimple.rowItemFocused" onChange="OnItemFocused"/>
+		<field id="focusedSimpleRowlistContent" type="node"/>
 </interface>
 <script type="text/brightscript" uri="pkg:/components/RowListSimple/RowListSimple.brs"></script>
 <children>
