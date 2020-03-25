@@ -7,7 +7,7 @@
   
   <children >
     <ContentPageContent id="myContentPageContent"/>
-    <!-- <ButtonsPageContent id="myButtonPageContent"/>-->
+    <ListButtonPageContent id="myButtonPageContent"/>
     <RowListSimple id="myRowListSimple"/> 
   </children>
   

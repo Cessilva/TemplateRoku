@@ -1,7 +1,6 @@
 sub init()
       m.myContentPageContent = m.top.findNode("myContentPageContent")
       m.myRowListSimple = m.top.findNode("myRowListSimple")
-      
 end sub
 
 function pasarContenidoContentPageContent()

@@ -1,0 +1,51 @@
+<?xml version = "1.0" encoding = "utf-8" ?>
+<component name = "ButtonsPageContent" extends = "Group" initialFocus="myRowListSimple" >
+ <interface>
+ <!-- color azul focused value="#2f6997" -->
+        <field id="frameColor" type="string" alias="frame.color" value="#ffffff" />
+        <field id="bgColor" type="string" alias="bg.color" value="#2f6997" />
+        <field id="text" type="string" alwaysNotify="true" alias="buttonText.text" value="text" onChange="onButtonTextChange" />
+        <field id="maxWidth" type="float" alwaysNotify="true" alias="buttonText.width" value="100" onChange="onButtonWidthChange" />
+        <field id="textSize" type="integer" alwaysNotify="true" value="20" onChange="onButtonSizeChange" />
+        <field id="iconUri" type="string" alwaysNotify="true" alias="buttonIcon.uri"/>
+        <field id="iconHeight" type="float" alwaysNotify="true" alias="buttonIcon.height" onChange="onButtonIconChange"/>
+        <field id="iconWidth" type="float" alwaysNotify="true" alias="buttonIcon.width" onChange="onButtonIconChange"/>
+        <field id="focused" type="boolean" alwaysNotify="true" onChange="onFocusChange" />
+    </interface>
+
+<script type = "text/brightscript" uri="pkg:/components/ButtonsPageContent/ButtonsPageContent.brs/"></script>
+  <children >
+  <!-- contenedor color de fondo -->
+      <Rectangle 
+      id="mainRectangle" 
+      color="#000000" 
+      height="500"
+      opacity="1">
+      <!-- contenedor borde blanco selector -->
+            <Rectangle 
+            id="frame" 
+            height="60" 
+            width="140" 
+            visible="true">
+            <!-- contenedor contenido del borde blanco selector -->
+                <Rectangle 
+                id="bg" 
+                height="80"
+                width="134" 
+                translation="[3,3]" />
+                <Label id="buttonText" 
+            color="#ffffffff"
+            vertAlign = "bottom"
+            horizAlign="right"
+            />
+            </Rectangle>
+
+            <Poster id="buttonIcon"/>
+
+            
+
+        </Rectangle>
+  </children>
+</component>
+
+   

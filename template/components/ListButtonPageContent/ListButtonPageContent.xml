@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<component name="ListButtonPageContent" extends="Group" >
+
+	<interface>
+		<field id="currentFocus" type="integer" />
+		<field id="buttonSelected" type="string" />
+	</interface>
+
+	<script type="text/brightscript" uri="pkg:/components/ListButtonPageContent/ListButtonPageContent.brs" />
+
+	<children>
+        
+		<Rectangle>
+			<LayoutGroup 
+            id="LayoutGroup" 
+            layoutDirection="horiz" 
+            addItemSpacingAfterChild="true" 
+            itemSpacings="[5,5,5,5,5,5]"
+            translation="[120,360]"
+            >
+				<ButtonsPageContent 
+                id="trailer" 
+                text="Trailer" 
+                textSize="16"
+                iconUri=""
+                iconWidth="120" 
+                iconHeight="40" 
+                maxWidth="100"/>
+                <ButtonsPageContent 
+                id="reproducir" 
+                text="Reproducir" 
+                iconUri="" 
+                textSize="16"
+                iconWidth="120" 
+                iconHeight="40" 
+                maxWidth="100"/>
+                <ButtonsPageContent 
+                id="idioma" 
+                text="Idioma" 
+                textSize="16"
+                iconUri="" 
+                iconWidth="120" 
+                iconHeight="40" 
+                maxWidth="100"/>
+                <ButtonsPageContent 
+                id="milista" 
+                text="Mi lista" 
+                textSize="16"
+                iconUri="" 
+                iconWidth="120" 
+                iconHeight="40" 
+                maxWidth="100"/>
+			</LayoutGroup>
+		</Rectangle>
+	</children>
+</component>
