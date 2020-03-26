@@ -41,17 +41,17 @@ end function
 sub OnFocusedChildChange()
     ? "[GridScreen] >> OnFocusedChildChange"
     if m.top.isInFocusChain() and not m.rowlistButton.hasFocus() then
-        'm.rowlistButton.setFocus(true)
+        m.rowlistButton.setFocus(true)
     end if
 end sub
 
-sub OnItemFocused()
-    itemFocused = m.top.itemSimpleFocused
-    'print m.top.content.getChild(itemFocused[0]).getChild(itemFocused[1])
-    if itemFocused.count() = 2 then
-        focusedContent = m.top.content.getChild(itemFocused[0]).getChild(itemFocused[1])
-        if focusedContent <> invalid then
-            m.top.focusedButton = focusedContent
-        end if
-    end if
-end sub
+' sub OnItemFocused()
+'     itemFocused = m.top.itemSimpleFocused
+'     'print m.top.content.getChild(itemFocused[0]).getChild(itemFocused[1])
+'     if itemFocused.count() = 2 then
+'         focusedContent = m.top.content.getChild(itemFocused[0]).getChild(itemFocused[1])
+'         if focusedContent <> invalid then
+'             m.top.focusedButton = focusedContent
+'         end if
+'     end if
+' end sub

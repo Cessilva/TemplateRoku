@@ -18,14 +18,14 @@ end sub
 
 sub onFocusChange()
     ?"onFocusChange"
-    if m.top.focused then
+    if m.top.itemHasFocus then
         m.frame.visible = true
         m.buttonText.opacity = 1
         m.mainRectangle.color = "#2f6997"
         m.bg.color="#2f6997"
     else
         m.frame.visible = false
-        m.buttonText.opacity = 0.7
+        m.buttonText.opacity = 0.5
         m.mainRectangle.color = "#25415a"
         m.bg.color="#25415a"
     end if
