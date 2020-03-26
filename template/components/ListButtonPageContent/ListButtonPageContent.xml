@@ -1,56 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <component name="ListButtonPageContent" extends="Group" >
-
-	<interface>
-		<field id="currentFocus" type="integer" />
-		<field id="buttonSelected" type="string" />
-	</interface>
-
-	<script type="text/brightscript" uri="pkg:/components/ListButtonPageContent/ListButtonPageContent.brs" />
-
-	<children>
-        
-		<Rectangle>
-			<LayoutGroup 
-            id="LayoutGroup" 
-            layoutDirection="horiz" 
-            addItemSpacingAfterChild="true" 
-            itemSpacings="[5,5,5,5,5,5]"
-            translation="[120,360]"
-            >
-				<ButtonsPageContent 
-                id="trailer" 
-                text="Trailer" 
-                textSize="16"
-                iconUri=""
-                iconWidth="120" 
-                iconHeight="40" 
-                maxWidth="100"/>
-                <ButtonsPageContent 
-                id="reproducir" 
-                text="Reproducir" 
-                iconUri="" 
-                textSize="16"
-                iconWidth="120" 
-                iconHeight="40" 
-                maxWidth="100"/>
-                <ButtonsPageContent 
-                id="idioma" 
-                text="Idioma" 
-                textSize="16"
-                iconUri="" 
-                iconWidth="120" 
-                iconHeight="40" 
-                maxWidth="100"/>
-                <ButtonsPageContent 
-                id="milista" 
-                text="Mi lista" 
-                textSize="16"
-                iconUri="" 
-                iconWidth="120" 
-                iconHeight="40" 
-                maxWidth="100"/>
-			</LayoutGroup>
-		</Rectangle>
-	</children>
+<interface>
+		<field id="content" type="node" alias="myRowListButton.content" onChange="onContentChange"/>
+		<field id="rowItemSelected" type="intarray" alwaysnotify="true" alias="myRowListButton.rowItemSelected"/>
+		<field id="itemFocused" type="intarray" alias="myRowListButton.rowItemFocused" onChange="OnItemFocused"/>
+		<field id="focusedButton" type="node"/>
+</interface>
+<script type="text/brightscript" uri="pkg:/components/ListButtonPageContent/ListButtonPageContent.brs" />
+<children>
+    <RowList 
+    id = "myRowListButton" 
+    translation = "[120,355]" 
+    numRows = "1" 
+    itemComponentName="ButtonsPageContent" 
+    itemSize = "[ 1400, 120 ]" 
+    rowItemSize = "[ [145, 130] ]" 
+    showRowLabel  = "[ false ]"
+    drawFocusFeedback = "true" 
+    rowFocusAnimationStyle = "floatingFocus" />
+</children>
 </component>
+
+
+
