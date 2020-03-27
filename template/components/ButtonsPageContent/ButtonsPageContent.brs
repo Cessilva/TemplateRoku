@@ -25,7 +25,7 @@ sub onFocusChange()
         m.bg.color="#2f6997"
     else
         m.frame.visible = false
-        m.buttonText.opacity = 0.5
+        m.buttonText.opacity = 0.3
         m.mainRectangle.color = "#25415a"
         m.bg.color="#25415a"
     end if
