@@ -7,21 +7,20 @@ sub init()
         }
         {
             titulo:"Reproducir"
-            url:"pkg:/images/ordenador-portatil.png"
+            url:"pkg:/images/boton-de-play.png"
         }
         {
             titulo:"Idioma"
-            url:"pkg:/images/ordenador-portatil.png"
+            url:"pkg:/images/tema.png"
         }
         {
             titulo:"Mi lista"
-            url:"pkg:/images/ordenador-portatil.png"
+            url:"pkg:/images/mas.png"
         }
     ]
     content=parseContent(lista)
     m.rowlistButton.content= content
     m.top.observeField("focusedChild","OnFocusedChildChange")
-    m.top.setFocus(true)
 end sub
 
 function parseContent(lista as object)

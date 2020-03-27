@@ -16,7 +16,7 @@
     itemSize = "[ 1400, 120 ]" 
     rowItemSize = "[ [145, 130] ]" 
     showRowLabel  = "[ false ]"
-    drawFocusFeedback = "true" 
+    drawFocusFeedback = "false" 
     rowFocusAnimationStyle = "floatingFocus" />
 </children>
 </component>
