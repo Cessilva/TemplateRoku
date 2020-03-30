@@ -3,6 +3,7 @@
 <!-- BrightScript Portion -->
 <script type="text/brightscript" uri="pkg:/components/mainScene.brs"></script>
 <children>
+        <PrincipalPage id="myPrincipalPage"/>
         <RowListExample id="myRowListExample"/>
         <RowListPageContent id="myRowListPageContent"/>
 </children>

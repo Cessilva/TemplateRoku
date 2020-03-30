@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="PrincipalPage" extends="Group" >
+<interface>
+		<field id="content" type="node" alias="myRowListPrincipal.content" onChange="onContentChange"/>
+		<field id="rowItemSelected" type="intarray" alwaysnotify="true" alias="myRowListPrincipal.rowItemSelected"/>
+		<field id="itemFocused" type="intarray" alias="myRowListPrincipal.rowItemFocused" onChange="OnItemFocused"/>
+		<field id="focusedContent" type="node"/>
+</interface>
+<script type="text/brightscript" uri="pkg:/components/PrincipalPage/PrincipalPage.brs" />
+<children>
+ <RowList 
+      id = "myRowListPrincipal" 
+      translation = "[ 50, 80 ]" 
+      numRows = "5" 
+      itemComponentName="RowListItem" 
+      itemSize = "[ 1400, 290 ]" 
+      rowItemSize = "[ [536, 290] ]" 
+      itemSpacing = "[0, 60 ]" 
+      showRowLabel  = "[ true ]"
+      rowLabelOffset ="[[0,15]]"
+      drawFocusFeedback = "true" 
+      vertFocusAnimationStyle = "fixedFocusWrap" 
+      rowFocusAnimationStyle = "fixedFocusWrap" />
+</children>
+</component>

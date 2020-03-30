@@ -1,5 +1,5 @@
  sub init()
-      m.rowlist = m.top.findNode("myRowList")
+      m.rowlist = m.top.findNode("myRowListPrincipal")
       m.readRowListExampleTask = createObject("roSGNode","RowListExampleTask")
       m.readRowListExampleTask.control = "RUN"
       m.readRowListExampleTask.observeField("content", "showpostergrid")
@@ -8,9 +8,9 @@
       m.top.observeField("visible", "OnVisibleChange")
       m.top.observeField("focusedChild","OnFocusedChildChange")
 
+
     end sub
     
-
 sub OnFocusedChildChange()
     ? "[GridScreen] >> OnFocusedChildChange"
     'is.InFocusChain: Comprueba si el nodo sujeto o alguno de sus descendientes 
