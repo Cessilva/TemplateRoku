@@ -44,13 +44,4 @@ sub OnFocusedChildChange()
     end if
 end sub
 
-' sub OnItemFocused()
-'     itemFocused = m.top.itemSimpleFocused
-'     'print m.top.content.getChild(itemFocused[0]).getChild(itemFocused[1])
-'     if itemFocused.count() = 2 then
-'         focusedContent = m.top.content.getChild(itemFocused[0]).getChild(itemFocused[1])
-'         if focusedContent <> invalid then
-'             m.top.focusedButton = focusedContent
-'         end if
-'     end if
-' end sub
+

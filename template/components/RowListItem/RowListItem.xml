@@ -3,6 +3,8 @@
   <interface > 
     <field id = "itemContent" type = "node"  onChange = "showcontent"/>
     <field id = "focusPercent" type = "float" onChange = "showfocus"/> 
+    <field id= "posterHeight" type="float" alwaysNotify="true" alias="itemPoster.height" value="280"  onChange="onButtonPosterChange"/>
+    <field id= "posterWidth" type="float" alwaysNotify="true" alias="itemPoster.width" value="500" onChange="onButtonPosterChange"/>
   </interface>
 
   <script type = "text/brightscript" uri="pkg:/components/RowListItem/RowListItem.brs/"></script>
@@ -11,11 +13,8 @@
     <Poster 
       id = "itemPoster" 
       translation = "[ 10, 10 ]" 
-      width = "500" 
-      height = "280" 
       scaleRotateCenter = "[ 256.0, 144.0 ]" >
     </Poster>
   </children>
-  
 </component>
 
