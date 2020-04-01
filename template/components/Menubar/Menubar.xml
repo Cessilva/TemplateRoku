@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<component name="Menubar" extends="Group" >
+<interface>
+		<field id="content" type="node" alias="myRowListMenubar.content" onChange="onContentChange"/>
+		<field id="rowItemSelected" type="intarray" alwaysnotify="true" alias="myRowListMenubar.rowItemSelected"/>
+		<field id="itemFocused" type="intarray" alias="myRowListMenubar.rowItemFocused" onChange="OnItemFocused"/>
+		<field id="focusedButton" type="node"/>
+</interface>
+<script type="text/brightscript" uri="pkg:/components/Menubar/Menubar.brs" />
+<children>
+    <RowList 
+    id = "myRowListMenubar" 
+    translation = "[140,50]" 
+    numRows = "1" 
+    itemComponentName="MenubarButtons"
+    itemSize = "[ 1200, 120 ]" 
+    rowItemSize = "[ [100, 130], [145, 130], [145, 130], [145, 130], [195, 130],[125, 130]]" 
+    showRowLabel  = "[ false ]"
+    drawFocusFeedback = "false" 
+    rowFocusAnimationStyle = "floatingFocus" />
+</children>
+</component>
