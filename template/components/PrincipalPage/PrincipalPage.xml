@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<component name="PrincipalPage" extends="Group" >
+<component name="PrincipalPage" extends="Group" initialFocus="myMenubar" >
+<interface>
+		<field id="focusedContent" type="node"/>
+            <field id="itemFocused" type="intarray"/>
+</interface>
 <script type="text/brightscript" uri="pkg:/components/PrincipalPage/PrincipalPage.brs" />
 <children>
       <Menubar id="myMenubar"/>

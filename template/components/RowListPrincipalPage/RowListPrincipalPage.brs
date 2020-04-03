@@ -9,9 +9,6 @@
         m.rowlist.content= m.readRowListExampleTask.content
         m.top.observeField("visible", "OnVisibleChange")
         m.top.observeField("focusedChild","OnFocusedChildChange")
-
-        print "------------------------------------------------"
-        print m.newRowListItem.rowItemSize
     end sub
     
 sub OnFocusedChildChange()
@@ -28,7 +25,6 @@ sub OnItemFocused()
         focusedContent = m.top.content.getChild(itemFocused[0]).getChild(itemFocused[1])
         if focusedContent <> invalid then
             m.top.focusedContent = focusedContent
-            
         end if
     end if
 end sub

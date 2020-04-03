@@ -4,6 +4,7 @@
 <script type="text/brightscript" uri="pkg:/components/mainScene.brs"></script>
 <children>
         <PrincipalPage id="myPrincipalPage"/>
+        <RowListPageContent id="myRowListPageContentPrincipalPage"/>
         <RowListExample id="myRowListExample"/>
         <RowListPageContent id="myRowListPageContent"/>
 </children>

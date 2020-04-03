@@ -14,7 +14,7 @@
     numRows = "1" 
     itemComponentName="MenubarButtons"
     itemSize = "[ 1200, 120 ]" 
-    rowItemSize = "[ [100, 130], [145, 130], [145, 130], [145, 130], [195, 130],[125, 130]]" 
+    rowItemSize = "[ [100, 130], [145, 130], [145, 130], [145, 130], [195, 130],[110, 130]]" 
     showRowLabel  = "[ false ]"
     drawFocusFeedback = "false" 
     rowFocusAnimationStyle = "floatingFocus" />

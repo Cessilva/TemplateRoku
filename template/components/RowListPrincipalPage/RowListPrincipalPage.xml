@@ -18,7 +18,7 @@
             showRowLabel  = "[false, true ]"
             rowLabelOffset ="[[0,15]]"
             drawFocusFeedback = "true" 
-            vertFocusAnimationStyle = "fixedFocusWrap" 
+            vertFocusAnimationStyle = "fixedFocus" 
             rowFocusAnimationStyle = "fixedFocusWrap" />
 </children>
 </component>
