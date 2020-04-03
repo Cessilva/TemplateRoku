@@ -5,6 +5,7 @@
 		<field id="rowItemSelected" type="intarray" alwaysnotify="true" alias="myRowListMenubar.rowItemSelected"/>
 		<field id="itemFocused" type="intarray" alias="myRowListMenubar.rowItemFocused" onChange="OnItemFocused"/>
 		<field id="focusedButton" type="node"/>
+        <field id="buttonsSize" type="intarray"/>
 </interface>
 <script type="text/brightscript" uri="pkg:/components/Menubar/Menubar.brs" />
 <children>
@@ -12,11 +13,11 @@
     id = "myRowListMenubar" 
     translation = "[140,50]" 
     numRows = "1" 
-    itemComponentName="MenubarButtons"
+    variableWidthItems="true"
     itemSize = "[ 1200, 120 ]" 
-    rowItemSize = "[ [100, 130], [145, 130], [145, 130], [145, 130], [195, 130],[110, 130]]" 
+    rowItemSize = "[[120,70],[50,20]]" 
     showRowLabel  = "[ false ]"
-    drawFocusFeedback = "false" 
-    rowFocusAnimationStyle = "floatingFocus" />
+    drawFocusFeedback = "true" 
+    rowFocusAnimationStyle = "fixedFocusWrap" />
 </children>
 </component>

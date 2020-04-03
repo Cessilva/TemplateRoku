@@ -2,7 +2,7 @@ sub init()
       m.myRowListPrincipalPage = m.top.findNode("myRowListPrincipalPage")
       m.myMenubar= m.top.findNode("myMenubar")
       m.myRowListPrincipalPage.observeField("itemFocused","asignarContenidoPrincipalPage")
-      print "--------------------------------"
+
       m.myMenubar.observeField("itemFocused","asignarBotonElegido")
 end sub
 
@@ -14,7 +14,6 @@ function asignarContenidoPrincipalPage()
   m.top.focusedContent=m.myRowListPrincipalPage.focusedContent
 end function
 function onKeyEvent(key as String, press as Boolean) as Boolean
-  print press
   handled = false
   if (press=false) then
     if (key = "down") then

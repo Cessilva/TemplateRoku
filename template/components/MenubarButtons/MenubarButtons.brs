@@ -5,9 +5,10 @@ sub init()
     m.mainRectangle = m.top.findNode("mainRectangle")
     m.frame = m.top.findNode("frame")
     m.bg = m.top.findNode("bg")
-    
-    
-    
+    m.menubar = createObject("roSGNode","Menubar")
+    print "----------------------------"
+    print m.menubar
+
 
     centery = (m.frame.height-m.buttonIcon.height) / 2
     centerx = (m.frame.width-m.buttonIcon.width) / 2

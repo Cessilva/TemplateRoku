@@ -9,7 +9,6 @@ function pasarContenidoContentPageContent()
 end function
 
 function onKeyEvent(key as String, press as Boolean) as Boolean
-  print press
   handled = false
   if (press=false) then
     if (key = "down") then

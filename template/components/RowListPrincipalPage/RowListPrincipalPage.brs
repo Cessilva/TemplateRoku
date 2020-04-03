@@ -2,8 +2,6 @@
         m.rowlist = m.top.findNode("myRowListPrincipal")
         m.readRowListExampleTask = createObject("roSGNode","RowListExampleTask")
         m.readRowListExampleTask.control = "RUN"
-        m.newRowListItem = createObject("roSGNode","RowListItem")
-        m.rowlist.itemComponentName=m.newRowListItem
 
         m.readRowListExampleTask.observeField("content", "showpostergrid")
         m.rowlist.content= m.readRowListExampleTask.content

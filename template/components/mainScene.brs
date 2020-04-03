@@ -24,7 +24,6 @@ end function
 
 ' QUITAMOS UN MOMENTO EL ONKEYEVENT
 function onKeyEvent(key as String, press as Boolean) as Boolean
-  print press
   handled = false
   if (press=false) then
     if (key = "OK") then
@@ -37,6 +36,7 @@ function onKeyEvent(key as String, press as Boolean) as Boolean
       m.myRowListPageContentPrincipalPage.visible=false
       m.myRowListExample.visible = true
       m.myPrincipalPage.visible = false
+
       else if (m.myRowListExample.isInFocusChain())then
       m.myRowListPageContent.setFocus(true)
       m.myRowListExample.setFocus(false)
@@ -46,8 +46,8 @@ function onKeyEvent(key as String, press as Boolean) as Boolean
       m.myRowListExample.visible = false
       m.myPrincipalPage.visible = false
       else
-      m.myRowListPageContent.setFocus(true)
-      m.myRowListPageContentPrincipalPage.setFocus(false)
+      m.myRowListPageContent.setFocus(false)
+      m.myRowListPageContentPrincipalPage.setFocus(true)
       m.myRowListExample.setFocus(false)
       m.myPrincipalPage.setFocus(false)
       m.myRowListPageContent.visible=false
@@ -57,7 +57,7 @@ function onKeyEvent(key as String, press as Boolean) as Boolean
       end if 
     else if (key="options") then 
       print key
-      if (m.myRowListPageContent.hasFocus())then
+      if (m.myRowListPageContent.hasFocus() )then
       m.myPrincipalPage.setFocus(false)
       m.myRowListPageContent.setFocus(false)
       m.myRowListExample.setFocus(true)
