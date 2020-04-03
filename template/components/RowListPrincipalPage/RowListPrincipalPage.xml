@@ -15,6 +15,7 @@
             itemSize = "[ 1400, 290 ]" 
             rowItemSize = "[ [700, 250],[400, 250] ]" 
             itemSpacing = "[0, 35]" 
+            rowItemSpacing="[[20,0]]"
             showRowLabel  = "[false, true ]"
             rowLabelOffset ="[[0,15]]"
             drawFocusFeedback = "true" 
