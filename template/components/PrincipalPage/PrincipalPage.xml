@@ -2,7 +2,7 @@
 <component name="PrincipalPage" extends="Group" initialFocus="myMenubar" >
 <interface>
 		<field id="focusedContent" type="node"/>
-            <field id="itemFocused" type="intarray"/>
+            <field id="itemFocused" type="integer"/>
 </interface>
 <script type="text/brightscript" uri="pkg:/components/PrincipalPage/PrincipalPage.brs" />
 <children>

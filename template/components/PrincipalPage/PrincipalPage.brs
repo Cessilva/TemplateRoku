@@ -1,18 +1,27 @@
 sub init()
+    
       m.myRowListPrincipalPage = m.top.findNode("myRowListPrincipalPage")
       m.myMenubar= m.top.findNode("myMenubar")
       m.myRowListPrincipalPage.observeField("itemFocused","asignarContenidoPrincipalPage")
+ 
 
-      m.myMenubar.observeField("itemFocused","asignarBotonElegido")
+      menubarRect = m.myMenubar.boundingRect()
+      centerx = (1300 - menubarRect.width) / 2
+      m.myMenubar.translation = [centerx, 75]
+
+      m.myMenubar.observeField("currentFocus","asignarBotonElegido")
+      m.myMenubar.setFocus(false)
 end sub
 
-' m.top.focusedContent=m.myRowListPrincipalPage.focusedContent
+
 function asignarBotonElegido()
-m.top.itemFocused=m.myMenubar.itemFocused
+m.top.itemFocused=m.myMenubar.currentFocus
 end function
+
 function asignarContenidoPrincipalPage()
   m.top.focusedContent=m.myRowListPrincipalPage.focusedContent
 end function
+
 function onKeyEvent(key as String, press as Boolean) as Boolean
   handled = false
   if (press=false) then

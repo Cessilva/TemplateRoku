@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<component name="CButton" extends="Group" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd">
+
+    <interface>
+        <field id="frameColor" type="string" alias="frame.color" value="#ffffff" />
+        <field id="bgColor" type="string" alias="bg.color" value="#28292e" />
+        <field id="text" type="string" alwaysNotify="true" alias="buttonText.text" value="text" onChange="onButtonTextChange" />
+        <field id="maxWidth" type="float" alwaysNotify="true" alias="buttonText.width" value="100" onChange="onButtonWidthChange" />
+        <field id="textSize" type="integer" alwaysNotify="true" value="34" onChange="onButtonSizeChange" />
+        <field id="iconUri" type="string" alwaysNotify="true" alias="buttonIcon.uri"/>
+        <field id="iconHeight" type="float" alwaysNotify="true" alias="buttonIcon.height" onChange="onButtonIconChange"/>
+        <field id="iconWidth" type="float" alwaysNotify="true" alias="buttonIcon.width" onChange="onButtonIconChange"/>
+        <field id="focused" type="boolean" alwaysNotify="true" onChange="onFocusChange" />
+    </interface>
+
+    <script type="text/brightscript" uri="pkg:/components/CButton/CButton.brs" />
+
+    <children>
+        <Rectangle id="mainRectangle" color="#808080" opacity="1.0">
+            <Rectangle id="frame" height="60" width="140" visible="false">
+                <Rectangle id="bg" height="54" width="134" translation="[3,3]" />
+            </Rectangle>
+            <Poster id="buttonIcon"/>
+            <Label id="buttonText" color="#ffffffff" vertAlign="center" horizAlign="center" />
+        </Rectangle>
+    </children>
+</component>

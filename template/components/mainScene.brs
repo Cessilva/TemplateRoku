@@ -1,4 +1,5 @@
 sub init()
+  m.top.backgroundURI = "pkg:/images/negro.png"
   m.myRowListExample = m.top.findNode("myRowListExample")
   m.myRowListPageContentPrincipalPage = m.top.findNode("myRowListPageContentPrincipalPage")
   m.myPrincipalPage= m.top.findNode("myPrincipalPage")
@@ -28,7 +29,7 @@ function onKeyEvent(key as String, press as Boolean) as Boolean
   if (press=false) then
     if (key = "OK") then
       print key
-      if (m.myPrincipalPage.itemFocused[1]=1 and not m.myRowListExample.isInFocusChain())then
+      if (m.myPrincipalPage.itemFocused=1 and not m.myRowListExample.isInFocusChain())then
       m.myRowListPageContent.setFocus(false)
       m.myRowListExample.setFocus(true)
       m.myPrincipalPage.setFocus(false)
@@ -36,7 +37,7 @@ function onKeyEvent(key as String, press as Boolean) as Boolean
       m.myRowListPageContentPrincipalPage.visible=false
       m.myRowListExample.visible = true
       m.myPrincipalPage.visible = false
-
+      return true 
       else if (m.myRowListExample.isInFocusChain())then
       m.myRowListPageContent.setFocus(true)
       m.myRowListExample.setFocus(false)
@@ -45,6 +46,7 @@ function onKeyEvent(key as String, press as Boolean) as Boolean
       m.myRowListPageContentPrincipalPage.visible=false
       m.myRowListExample.visible = false
       m.myPrincipalPage.visible = false
+      return true
       else
       m.myRowListPageContent.setFocus(false)
       m.myRowListPageContentPrincipalPage.setFocus(true)
@@ -57,7 +59,8 @@ function onKeyEvent(key as String, press as Boolean) as Boolean
       end if 
     else if (key="options") then 
       print key
-      if (m.myRowListPageContent.hasFocus() )then
+      if (m.myRowListPageContent.isInFocusChain())then
+      print "hola"
       m.myPrincipalPage.setFocus(false)
       m.myRowListPageContent.setFocus(false)
       m.myRowListExample.setFocus(true)
@@ -65,6 +68,16 @@ function onKeyEvent(key as String, press as Boolean) as Boolean
       m.myRowListPageContentPrincipalPage.visible=false
       m.myRowListExample.visible = true
       m.myPrincipalPage.visible = false
+      return true
+      else if (m.myRowListPageContentPrincipalPage.isInFocusChain() )then
+      m.myPrincipalPage.setFocus(true)
+      m.myRowListPageContent.setFocus(false)
+      m.myRowListExample.setFocus(false)
+      m.myRowListPageContent.visible=false
+      m.myRowListPageContentPrincipalPage.visible=false
+      m.myRowListExample.visible = false
+      m.myPrincipalPage.visible = true
+      return true
       else
       m.myPrincipalPage.setFocus(true)
       m.myRowListPageContent.setFocus(false)

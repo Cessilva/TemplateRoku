@@ -1,23 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<component name="Menubar" extends="Group" >
-<interface>
-		<field id="content" type="node" alias="myRowListMenubar.content" onChange="onContentChange"/>
-		<field id="rowItemSelected" type="intarray" alwaysnotify="true" alias="myRowListMenubar.rowItemSelected"/>
-		<field id="itemFocused" type="intarray" alias="myRowListMenubar.rowItemFocused" onChange="OnItemFocused"/>
-		<field id="focusedButton" type="node"/>
-        <field id="buttonsSize" type="intarray"/>
-</interface>
-<script type="text/brightscript" uri="pkg:/components/Menubar/Menubar.brs" />
-<children>
-    <RowList 
-    id = "myRowListMenubar" 
-    translation = "[140,50]" 
-    numRows = "1" 
-    variableWidthItems="true"
-    itemSize = "[ 1200, 120 ]" 
-    rowItemSize = "[[120,70],[50,20]]" 
-    showRowLabel  = "[ false ]"
-    drawFocusFeedback = "true" 
-    rowFocusAnimationStyle = "fixedFocusWrap" />
-</children>
+<component name="Menubar" extends="Group" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd">
+
+	<interface>
+		<field id="currentFocus" type="integer" />
+		<field id="buttonSelected" type="string" />
+	</interface>
+	<script type="text/brightscript" uri="pkg:/components/Menubar/Menubar.brs" />
+
+	<children>
+		<Rectangle id="myRectangle" color="#333333" >
+			<LayoutGroup id="LayoutGroup" layoutDirection="horiz"  addItemSpacingAfterChild="true" itemSpacings="[1]">
+				<CButton id="buscar" text="" iconUri="pkg:/images/buscar.png" iconWidth="40" iconHeight="40" maxWidth="40"/>
+				<CButton id="Inicio" text="Inicio" textSize="20" maxWidth="60"/>
+				<CButton id="Catalogo" text="Catalogo" textSize="20" maxWidth="100"/>
+				<CButton id="Generos" text="Generos" textSize="20" maxWidth="90" />
+				<CButton id="CompraRenta" text="Compra y Renta" textSize="20" maxWidth="180" />
+				<CButton id="Canales" text="Canales" textSize="20" maxWidth="90"/>
+				<CButton id="Kids" text="" iconUri="pkg:/images/ninos.png" iconWidth="60" iconHeight="35" maxWidth="100"/>
+                <CButton id="User" text="" iconUri="pkg:/images/cuenta.png" iconWidth="55" iconHeight="35" maxWidth="70"/>
+			</LayoutGroup>
+		</Rectangle>
+	</children>
+
 </component>
