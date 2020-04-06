@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<component name="CButton" extends="Group" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://devtools.web.roku.com/schema/RokuSceneGraph.xsd">
+<component name="CButton" extends="Group" >
 
     <interface>
-        <field id="frameColor" type="string" alias="frame.color" value="#ffffff" />
-        <field id="bgColor" type="string" alias="bg.color" value="#28292e" />
-        <field id="text" type="string" alwaysNotify="true" alias="buttonText.text" value="text" onChange="onButtonTextChange" />
-        <field id="maxWidth" type="float" alwaysNotify="true" alias="buttonText.width" value="100" onChange="onButtonWidthChange" />
-        <field id="textSize" type="integer" alwaysNotify="true" value="34" onChange="onButtonSizeChange" />
+        <field id="frameColor" type="string" alias="frame.color" value="#333333" />
+        <field id="bgColor" type="string" alias="bg.color" value="#333333" />
+        <field id="text" type="string" alwaysNotify="true" alias="buttonText.text" value="text" onChange="onButtonChange" />
+        <field id="maxWidth" type="float" alwaysNotify="true" alias="buttonText.width" value="100" onChange="onButtonChange" />
+        <field id="textSize" type="integer" alwaysNotify="true" value="16" onChange="onButtonSizeChange" />
         <field id="iconUri" type="string" alwaysNotify="true" alias="buttonIcon.uri"/>
         <field id="iconHeight" type="float" alwaysNotify="true" alias="buttonIcon.height" onChange="onButtonIconChange"/>
         <field id="iconWidth" type="float" alwaysNotify="true" alias="buttonIcon.width" onChange="onButtonIconChange"/>
